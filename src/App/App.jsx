@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { PrivateRoute } from '../_components'
 
 class App extends React.Component
 {
@@ -10,7 +11,20 @@ class App extends React.Component
 
     render(){
             return (
-                <div>Login here</div>
+                <div className="jumbotron">
+                    <div className="container">
+                        <div className="col-sm-8 col-sm-offset-2">
+                            
+                            <Router history={history}>
+                                <div>
+                                    <PrivateRoute exact path="/" component={HomePage} />
+                                    <Route path="/login" component={LoginPage} />
+                                    <Route path="/register" component={RegisterPage} />
+                                </div>
+                            </Router>
+                        </div>
+                    </div>
+                </div>
             );
     }
 }
@@ -32,5 +46,5 @@ export { connectedApp as App };
 /*-- dev notes --
 - this is the main Application 
 - mapStateToProps is the CONTAINER part of Redux to connect store and components 
-- exporting App as a 'named export' (without default) , imported with {App}
+- exporting App as a 'named export' (without default) , imported with exact name {App}
 ----*/
