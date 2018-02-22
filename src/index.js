@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'; 
 import { App } from './App';
 import { store } from './_helpers'  
-import { configureFakeBackEnd } from './_helpers'
+import { configureFakeBackend } from './_helpers'
 import registerServiceWorker from './registerServiceWorker';
 
-configureFakeBackEnd();
+configureFakeBackend();
 
 ReactDOM.render(
     <Provider store = { store }>
@@ -19,7 +19,7 @@ registerServiceWorker();
 
 /*-- dev notes --
 - this is the entry point to the app
-
+- hook the App component to the store provider , where the store is exporting a combined items of all reducers
 
 
 ----*/

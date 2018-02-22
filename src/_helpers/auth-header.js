@@ -4,7 +4,7 @@ export function authHeader(){
 
     //check if user and token exist 
     if(user && user.token){
-        return { 'Authorization' : 'Bearer' + user.token };
+        return { 'Authorization' : 'Bearer ' + user.token };
     }
     else {
         return {}; 

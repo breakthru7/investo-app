@@ -102,4 +102,8 @@ function _delete(id) {
     Dev Note :
     - in actionCreator , there can be method performed and then a plain JSON object returned as Action 
     - Action need to have "type" and "payload" (which can be anything else) properties 
+
+    - dispatch (call function) is being return separately here so matchDispatchToProps is not required ,
+    which is used to hook the action to Redux 
+    - .then method returned a promise that takes up 2 arguements : callback functions for success/failure
 */
