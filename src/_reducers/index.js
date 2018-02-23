@@ -12,3 +12,5 @@ const rootReducer = combineReducers({
 }); 
 
 export default rootReducer;
+
+//Dev note : all reducers will get called once an action is dispatched 

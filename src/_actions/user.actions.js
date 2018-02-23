@@ -106,4 +106,6 @@ function _delete(id) {
     - dispatch (call function) is being return separately here so matchDispatchToProps is not required ,
     which is used to hook the action to Redux 
     - .then method returned a promise that takes up 2 arguements : callback functions for success/failure
+
+    - calling an async API need to dispatch at least 3 actions : request , success , failure 
 */
